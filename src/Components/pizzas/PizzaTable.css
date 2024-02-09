@@ -1,0 +1,67 @@
+.pizzas-table-wrapper {
+    width: 100%;
+}
+
+.pizzas-table {
+    display: block;
+    table-layout: fixed;
+    border-collapse: collapse;
+    box-shadow: 0 10px 10px #ccc;
+    border-radius: 10px;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 80%;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.pizzas-table thead {
+    background-color: #ccc;
+    color: #222;
+}
+
+.pizzas-table th,
+.pizzas-table td {
+    padding: 0.8rem;
+}
+
+.pizzas-table td {
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pizzas-body tr:hover {
+    background-color: #eee;
+}
+
+.pizzas-body {
+    display: block;
+    overflow: scroll;
+    height: fit-content;
+    max-height: 20em;
+}
+
+.pizzas-expand {
+    text-align: center;
+    white-space: normal;
+    width: 100%;
+}
+
+.pizzas-expand td{
+    text-align: center;
+    width: 100%;
+}
+
+.pizzas-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pizzas-actions svg {
+    cursor: pointer;
+}
+
+.pizzas-delete-button {
+    color: red;
+}

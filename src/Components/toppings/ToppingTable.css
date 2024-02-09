@@ -1,0 +1,63 @@
+.toppings-table-wrapper {
+    width: 100%;
+}
+
+.toppings-table {
+    display: block;
+    table-layout: fixed;
+    border-collapse: collapse;
+    box-shadow: 0 10px 10px #ccc;
+    border-radius: 10px;
+    white-space: nowrap;
+    width: 100em;
+    max-width: 80%;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.toppings-table thead {
+    background-color: #ccc;
+    color: #222;
+}
+
+.toppings-table th,
+.toppings-table td {
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.toppings-table td {
+    border-top: 0.5px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.toppings-body tr:hover {
+    background-color: #eee
+}
+
+.toppings-body {
+    display: block;
+    overflow: scroll;
+    height: fit-content;
+    max-height: 20em;
+}
+
+.toppings-expand {
+    text-align: center;
+    white-space: normal;
+    width: 100%;
+}
+
+.toppings-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.toppings-actions svg {
+    cursor: pointer;
+}
+
+.toppings-delete-button {
+    color: red;
+}
