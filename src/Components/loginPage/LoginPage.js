@@ -1,7 +1,8 @@
-import "./SignUpPage.css";
+import "./LoginPage.css";
 import React, { useState } from 'react';
 import ToppingPage from "../toppings/ToppingPage";
 import AdminPage from "../adminPage/AdminPage";
+import PizzaPage from "../pizzas/PizzaPage";
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom';
 
 const SignUpPageReturn = () => {
@@ -9,14 +10,14 @@ const SignUpPageReturn = () => {
         <Router>
             <Routes>
                 <Route exact path="/admin" element={<AdminPage />} />
-                <Route exact path="/toppings" element={<ToppingPage />} />
-                <Route exact path="/" element={<SignUpPage />} />
+                <Route exact path="/pizzas" element={<PizzaPage />} />
+                <Route exact path="/" element={<LoginPage />} />
             </Routes>
         </Router>
     );
 };
 
-const SignUpPage = () => {
+const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [redirectPath, setRedirectPath] = useState(null);
@@ -30,7 +31,7 @@ const SignUpPage = () => {
             setRedirectPath('/admin');
         } else if (email === 'chef@pizzas.com' && password === 'pizzaPassword') {
             // Set redirect path to toppings page
-            setRedirectPath('/toppings');
+            setRedirectPath('/pizzas');
         } else {
             // Handle invalid login
             alert('Invalid email or password');
