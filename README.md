@@ -17,6 +17,11 @@ Chef will login user as a chef where only pizzas can be updated.
 
 Tests:
 
+- NOTE: There is no sign out functionality implemented. To login as another user, please re-enter 
+- http://pizzas.jayvelazco-projects.com/ into your browser.
+
+- NOTE: This has been deployed using AWS EC2 and an S3 bucket. No instructions for running locally.
+
 - Click the add button to open the modal window to enter new topping/pizza. (Duplicates not allowed)
 - Click the edit button to open the modal window to edit topping/pizza.
 - Click the delete button to delete a topping/pizza.
