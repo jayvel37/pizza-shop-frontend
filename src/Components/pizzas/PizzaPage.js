@@ -27,11 +27,11 @@ function PizzaPage() {
     };
 
     function addPizza(Pizza) {
-        const URL = "http://localhost:8000/pizzas/add-pizza/";
+        const URL = "http://18.221.132.40:8000/pizzas/add-pizza/";
 
         axios.post(URL, Pizza)
             .then((response) => {
-                axios.get('http://localhost:8000/pizzas/get-pizzas/')
+                axios.get('http://18.221.132.40:8000/pizzas/get-pizzas/')
                     .then(async (response) => {
                         console.log(response.data);
                         setPizzas(response.data);
@@ -47,11 +47,11 @@ function PizzaPage() {
     }
 
     function removePizza(Pizza){
-        const URL = "http://localhost:8000/pizzas/delete-pizza/";
+        const URL = "http://18.221.132.40:8000/pizzas/delete-pizza/";
 
         axios.delete(URL, {data: Pizza})
             .then((response) => {
-                axios.get('http://localhost:8000/pizzas/get-pizzas/')
+                axios.get('http://18.221.132.40:8000/pizzas/get-pizzas/')
                     .then(async (response) => {
                         console.log(response.data);
                         setPizzas(response.data);
@@ -66,14 +66,14 @@ function PizzaPage() {
     }
 
     function editPizza(oldPizza, newPizza) {
-        const URL = "http://localhost:8000/pizzas/edit-pizza/";
+        const URL = "http://18.221.132.40:8000/pizzas/edit-pizza/";
 
         axios.put(URL, {
             oldPizza: oldPizza["Name"],
             newPizza: newPizza
         })
             .then((response) => {
-                axios.get('http://localhost:8000/pizzas/get-pizzas/')
+                axios.get('http://18.221.132.40:8000/pizzas/get-pizzas/')
                     .then(async (response) => {
                         console.log(response.data);
                         setPizzas(response.data);
@@ -88,7 +88,7 @@ function PizzaPage() {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:8000/pizzas/get-pizzas/')
+        axios.get('http://18.221.132.40:8000/pizzas/get-pizzas/')
             .then(async (response) => {
                 console.log(response.data)
                 setPizzas(response.data);

@@ -27,13 +27,13 @@ function ToppingPage() {
     };
 
     function addTopping(topping) {
-        const URL = "http://localhost:8000/toppings/add-topping/";
+        const URL = "http://18.221.132.40:8000/toppings/add-topping/";
 
         axios.post(URL, {
             Topping: topping
         })
             .then((response) => {
-                axios.get('http://localhost:8000/toppings/get-toppings/')
+                axios.get('http://18.221.132.40:8000/toppings/get-toppings/')
                     .then(async (response) => {
                         setToppings(response.data.Toppings);
                     })
@@ -48,11 +48,11 @@ function ToppingPage() {
     }
 
     function removeTopping(topping){
-        const URL = "http://localhost:8000/toppings/delete-topping/";
+        const URL = "http://18.221.132.40:8000/toppings/delete-topping/";
 
         axios.delete(URL, {data:{Topping:topping}})
             .then((response) => {
-                axios.get('http://localhost:8000/toppings/get-toppings/')
+                axios.get('http://18.221.132.40:8000/toppings/get-toppings/')
                     .then(async (response) => {
                         setToppings(response.data.Toppings);
                     })
@@ -66,14 +66,14 @@ function ToppingPage() {
     }
 
     function editTopping(oldTopping, newTopping) {
-        const URL = "http://localhost:8000/toppings/edit-topping/";
+        const URL = "http://18.221.132.40:8000/toppings/edit-topping/";
 
         axios.put(URL, {
             oldTopping: oldTopping,
             newTopping: newTopping
         })
             .then((response) => {
-                axios.get('http://localhost:8000/toppings/get-toppings/')
+                axios.get('http://18.221.132.40:8000/toppings/get-toppings/')
                     .then(async (response) => {
                         setToppings(response.data.Toppings);
                     })
@@ -88,7 +88,7 @@ function ToppingPage() {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:8000/toppings/get-toppings/')
+        axios.get('http://18.221.132.40:8000/toppings/get-toppings/')
             .then(async (response) => {
                 setToppings(response.data.Toppings);
             })
