@@ -25,4 +25,5 @@ Tests:
 - Click the add button to open the modal window to enter new topping/pizza. (Duplicates not allowed)
 - Click the edit button to open the modal window to edit topping/pizza.
 - Click the delete button to delete a topping/pizza.
-- Note: Click the submit button in modal window with empty fields to get appropriate popup prompting user to enter field.
+- Note: Click the submit button in modal window with empty field(s) to get appropriate popup prompting user to enter field.
+- Note ^: Error popups for missing fields work for empty topping, pizza name and pizza topping. Together or individual fields.
