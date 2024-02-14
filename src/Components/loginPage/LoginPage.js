@@ -12,6 +12,7 @@ const SignUpPageReturn = () => {
                 <Route exact path="/admin" element={<AdminPage />} />
                 <Route exact path="/pizzas" element={<PizzaPage />} />
                 <Route exact path="/" element={<LoginPage />} />
+                <Route exact path="/toppings" element={<ToppingPage/>} />
             </Routes>
         </Router>
     );
@@ -31,7 +32,7 @@ const LoginPage = () => {
             setRedirectPath('/admin');
         } else if (email === 'chef@pizzas.com' && password === 'pizzaPassword') {
             // Set redirect path to toppings page
-            setRedirectPath('/pizzas');
+            setRedirectPath('/toppings');
         } else {
             // Handle invalid login
             alert('Invalid email or password');
